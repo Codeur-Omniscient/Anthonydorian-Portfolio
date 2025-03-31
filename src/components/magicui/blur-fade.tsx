@@ -12,20 +12,20 @@ import { useRef } from "react";
 
 type MarginType = UseInViewOptions["margin"];
 
-interface BlurFadeProps extends MotionProps {
-  children: React.ReactNode;
-  className?: string;
-  variant?: {
-    hidden: { y: number };
-    visible: { y: number };
+interface BlurFadeProps extends Readonly<MotionProps> {
+  readonly children: React.ReactNode;
+  readonly className?: string;
+  readonly variant?: {
+    readonly hidden: { readonly y: number };
+    readonly visible: { readonly y: number };
   };
-  duration?: number;
-  delay?: number;
-  offset?: number;
-  direction?: "up" | "down" | "left" | "right";
-  inView?: boolean;
-  inViewMargin?: MarginType;
-  blur?: string;
+  readonly duration?: number;
+  readonly delay?: number;
+  readonly offset?: number;
+  readonly direction?: "up" | "down" | "left" | "right";
+  readonly inView?: boolean;
+  readonly inViewMargin?: MarginType;
+  readonly blur?: string;
 }
 
 export function BlurFade({
