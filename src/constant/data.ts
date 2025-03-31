@@ -1,9 +1,19 @@
 import {
   SiCss3,
+  SiExpress,
+  SiFigma,
+  SiGit,
+  SiGithub,
   SiHtml5,
   SiJavascript,
+  SiJira,
+  SiMongodb,
+  SiMysql,
+  SiNetlify,
   SiNodedotjs,
+  SiPostman,
   SiReact,
+  SiSupabase,
   SiTailwindcss,
   SiTypescript,
 } from "react-icons/si";
@@ -12,6 +22,7 @@ import pokedexImg from "../assets/Pokedex-Screenshot.jpg";
 import pulseImg from "../assets/Pulse-Screenshot.jpg";
 import tutorifyImg from "../assets/Tutorify-Screenshot.jpg";
 
+// Projects section data
 export const Projects = [
   {
     title: "Mortgage Repayment Calculator",
@@ -123,6 +134,7 @@ export const Projects = [
   },
 ];
 
+// About section data
 export const techStack = [
   {
     name: "React",
@@ -149,6 +161,12 @@ export const techStack = [
     icon: SiNodedotjs,
   },
   {
+    name: "ExpressJs",
+    textColor: "#5c5c5d",
+    bgColor: "#5c5c5d4d",
+    icon: SiExpress,
+  },
+  {
     name: "Html",
     textColor: "#dd4b25",
     bgColor: "#dd4b254d",
@@ -169,12 +187,150 @@ export const techStack = [
 ];
 
 export const tools = [
-  { name: "Git", color: "#F05032" },
-  { name: "GitHub", color: "#181717" },
-  { name: "VS Code", color: "#007ACC" },
-  { name: "Figma", color: "#F24E1E" },
-  { name: "Postman", color: "#FF6C37" },
-  { name: "Docker", color: "#2496ED" },
-  { name: "Jira", color: "#0052CC" },
-  { name: "Notion", color: "#000000" },
+  { name: "Git", textColor: "#f94d27", bgColor: "#f94d274d", icon: SiGit },
+  { name: "GitHub", color: "#000000", bgColor: "#0000004d", icon: SiGithub },
+  {
+    name: "Netlify",
+    textColor: "#42cdcb",
+    bgColor: "#42cdcb4d",
+    icon: SiNetlify,
+  },
+  { name: "Figma", textColor: "#a259ff", bgColor: "#a259ff4d", icon: SiFigma },
+  {
+    name: "Postman",
+    textColor: "#ff6c36",
+    bgColor: "#ff6c364d",
+    icon: SiPostman,
+  },
+  { name: "Jira", textColor: "#2684ff", bgColor: "#2684ff4d", icon: SiJira },
+];
+
+export const databases = [
+  {
+    name: "MongoDB",
+    textColor: "#47A248",
+    bgColor: "#47A2484d",
+    icon: SiMongodb,
+  },
+  {
+    name: "Supabase",
+    textColor: "#36ba7f",
+    bgColor: "#36ba7f4d",
+    icon: SiSupabase,
+  },
+  { name: "MySQL", textColor: "#4479A1", bgColor: "#4479A14d", icon: SiMysql },
+];
+
+export const easterEggs = {
+  "fullstack developer": {
+    title: "Fullstack Developer",
+    content:
+      "A developer who works with both frontend (client-side) and backend (server-side) technologies, capable of building complete web applications from start to finish.",
+    icon: "🛠",
+  },
+  "UI/UX design": {
+    title: "UI/UX Design",
+    content:
+      "UI (User Interface) focuses on the visual elements users interact with, while UX (User Experience) ensures the overall interaction is intuitive and enjoyable.",
+    icon: "🎨",
+  },
+  "modern web technologies": {
+    title: "Modern Web Technologies",
+    content:
+      "Includes frameworks like React, Astro and Next, along with tools like Vite, TypeScript, and serverless architectures that enable building fast, responsive web applications.",
+    icon: "🚀",
+  },
+  "design and development": {
+    title: "Design + Development",
+    content:
+      "The powerful combination of aesthetic design principles with technical implementation skills, creating solutions that are both beautiful and functional.",
+    icon: "⚙️",
+  },
+  accessible: {
+    title: "Web Accessibility",
+    content:
+      "Ensuring websites can be used by everyone, including people with disabilities, by following WCAG guidelines and implementing features like keyboard navigation and screen reader support.",
+    icon: "♿",
+  },
+  performant: {
+    title: "Web Performance",
+    content:
+      "Optimizing load times, rendering, and runtime execution through techniques like code splitting, lazy loading, and efficient asset delivery to create fast, responsive experiences.",
+    icon: "⚡",
+  },
+  intuitive: {
+    title: "Intuitive Design",
+    content:
+      "Creating interfaces that users can understand and use without explicit instructions, following established patterns and mental models that feel natural and obvious.",
+    icon: "💡",
+  },
+  "clean, maintainable code": {
+    title: "Clean Code Practices",
+    content:
+      "Writing code that is readable, well-structured, and follows principles like DRY (Don't Repeat Yourself) and SOLID, making it easier to maintain and extend over time.",
+    icon: "✨",
+  },
+};
+
+// Formation section data
+export const certifications = [
+  {
+    name: "Responsive Web Design",
+    issuer: "FreeCodeCamp",
+    date: "2025",
+    type: "certification",
+    color: "#0A0A23",
+  },
+  {
+    name: "JavaScript Algorithms and Data Structures",
+    issuer: "FreeCodeCamp",
+    date: "2025",
+    type: "certification",
+    color: "#0A0A23",
+  },
+];
+
+export const education = [
+  {
+    name: "Bachelor of Computer Science",
+    institution: "CFI - CIRAS",
+    location: "Brazzaville, Republic of Congo",
+    date: "2021 - 2024",
+    type: "degree",
+    description:
+      "Specialized in Software Engineering with focus on web technologies and distributed systems.",
+  },
+  {
+    name: "Fullstack Web Development",
+    institution: "Akieny - Academy",
+    location: "Brazzaville, Republic of Congo",
+    date: "2024 - 2025",
+    type: "degree",
+    description:
+      "Intensive program covering frontend and backend development, databases, and deployment.",
+  },
+  {
+    name: "The Ultimate React Course by Jonas Schmedtmann",
+    institution: "Udemy",
+    date: "2024",
+    type: "online",
+    description:
+      "Master modern React development, including hooks, context API, advanced patterns and Nextjs.",
+  },
+  {
+    name: "Nodejs, Express, MongoDB & More: The Complete Bootcamp 2024",
+    institution: "Udemy",
+    date: "2024",
+    type: "online",
+    description:
+      "Learn to build RESTful APIs and web applications using Node.js, Express, and MongoDB.",
+  },
+  {
+    name: "Typescript 5 Fundamental",
+    institution: "Pluralsight",
+    date: "2024",
+    type: "online",
+    description:
+      "Comprehensive course covering TypeScript fundamentals, advanced types, and best practices.",
+  },
 ];

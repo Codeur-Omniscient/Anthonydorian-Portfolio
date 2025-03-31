@@ -259,3 +259,21 @@
   color: hsl(0, 0%, 60%);
   margin-top: 0.5rem;
 }
+
+/* Easter egg trigger */
+.easter-egg-trigger {
+  position: relative;
+  border-bottom: 1px dashed rgba(74, 222, 128, 0.4);
+  cursor: help;
+  transition: all 0.2s ease;
+}
+
+.easter-egg-trigger:hover {
+  color: #4ade80;
+  border-bottom-color: #4ade80;
+}
+
+/* Interactive text */
+.interactive-text p {
+  margin-bottom: 1rem;
+}

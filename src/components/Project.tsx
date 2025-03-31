@@ -9,10 +9,11 @@ const Project = () => {
     >
       <div className="mb-8">
         <h2 className="text-4xl md:text-5xl font-bold mb-2">
-          All Creative <span className="text-green-300">Works.</span>
+          Featured <span className="text-green-300">Projects.</span>
         </h2>
         <p className="text-muted-foreground text-xl mb-4">
-          Here's some of my projects that I have worked on.
+          Here are some of the projects I have worked on. Feel free to check
+          them out and explore!
         </p>
       </div>
       <div className="md:row-span-2 card-modern">
