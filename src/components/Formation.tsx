@@ -32,7 +32,7 @@ export default function Formation() {
       <div className="section-title">
         <div>
           <h2>
-            My <span className="accent-text">Formation</span>
+            My <span className="accent-text">Training</span>
           </h2>
           <p className="subtitle">
             Education, certifications, and continuous learning
