@@ -34,8 +34,8 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
             </div>
           ))}
         </div>
-        <div className="h-[1px] bg-gray-600" />
-        <p>{project.description}</p>
+        <div className="h-[1px] bg-gray-600 " />
+        <p className="text-gray-400">{project.description}</p>
       </div>
     </>
   );
