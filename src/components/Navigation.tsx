@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "motion/react";
-import { X, Menu, Mail } from "lucide-react";
+import { X, Menu } from "lucide-react";
 
 // Type pour les éléments de navigation
 interface NavItem {
@@ -106,14 +106,6 @@ const Navigation = () => {
                   {item.name}
                 </a>
               ))}
-
-              <a
-                href="#contact"
-                className="text-muted-foreground hover:text-green-300 transition-colors"
-                onClick={(e) => handleScrollToSection(e, "#contact")}
-              >
-                <Mail className="h-5 w-5" />
-              </a>
             </nav>
 
             <button
