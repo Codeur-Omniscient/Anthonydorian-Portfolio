@@ -1,5 +1,5 @@
 import { motion } from "motion/react";
-import { FileDown, Info } from "lucide-react";
+import { Info } from "lucide-react";
 import aboutImg from "../assets/about-img.jpg";
 import { useState } from "react";
 import { databases, easterEggs, techStack, tools } from "../constant/data";
@@ -42,7 +42,7 @@ const About = () => {
           className="md:col-span-2 relative"
         >
           <div className="relative">
-            <div className="absolute -top-4 -left-4 w-full h-full border border-green-700 rounded-lg"></div>
+            {/* <div className="absolute -top-4 -left-4 w-full h-full border border-green-700 rounded-lg"></div> */}
             <div className="relative z-10 overflow-hidden rounded-lg">
               <img
                 src={aboutImg}
@@ -53,7 +53,7 @@ const About = () => {
                 loading="lazy"
               />
             </div>
-            <div className="absolute bottom-4 right-4 p-2 bg-background border border-green-700 rounded-lg">
+            {/* <div className="absolute bottom-4 right-4 p-2 bg-background border border-green-700 rounded-lg">
               <svg
                 width="80"
                 height="30"
@@ -68,7 +68,7 @@ const About = () => {
                   strokeLinecap="round"
                 />
               </svg>
-            </div>
+            </div> */}
           </div>
         </motion.div>
 
@@ -79,7 +79,6 @@ const About = () => {
           transition={{ duration: 0.7, delay: 0.2 }}
           className="md:col-span-3 space-y-6 text-muted-foreground"
         >
-          <h3 className="text-2xl font-bold text-foreground">Anthony Dorian</h3>
           <div className="text-lg interactive-text">
             <p>
               I'm a passionate{" "}
@@ -176,10 +175,6 @@ const About = () => {
           </div>
 
           <div className="pt-4">
-            <p className="mb-4 text-lg">
-              I am also a full-stack engineer, here are my current favorite tech
-              stack:
-            </p>
             {/* Tab Navigation */}
             <div className="flex border-b border-green-700/30 mb-6">
               <button
@@ -315,18 +310,6 @@ const About = () => {
                 </motion.div>
               )}
             </div>
-          </div>
-
-          <div className="pt-4">
-            <a
-              href="./Resume-Anthony.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group inline-flex items-center gap-2 px-6 py-3 bg-[#111111] hover:bg-[#222222] transition-colors rounded-md text-white"
-            >
-              <FileDown className="h-4 w-4 transition-transform group-hover:-translate-y-1" />
-              Download CV
-            </a>
           </div>
         </motion.div>
       </div>
