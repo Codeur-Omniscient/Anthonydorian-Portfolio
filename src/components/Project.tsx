@@ -16,17 +16,19 @@ const Project = () => {
           them out and explore!
         </p>
       </div>
-      <div className="md:row-span-2 card-modern">
-        <ProjectCard project={Projects[0]} />
-      </div>
-      <div className="md:row-span-2 card-modern">
-        <ProjectCard project={Projects[1]} />
-      </div>
-      <div className="md:row-span-2 md:col-start-2 md:row-start-3 card-modern">
-        <ProjectCard project={Projects[2]} />
-      </div>
-      <div className="md:row-span-2 md:row-start-4 card-modern">
-        <ProjectCard project={Projects[3]} />
+      <div>
+        <div className="md:row-span-2 card-modern">
+          <ProjectCard project={Projects[0]} />
+        </div>
+        <div className="md:row-span-2 card-modern">
+          <ProjectCard project={Projects[1]} />
+        </div>
+        <div className="md:row-span-2 md:col-start-2 md:row-start-3 card-modern">
+          <ProjectCard project={Projects[2]} />
+        </div>
+        <div className="md:row-span-2 md:row-start-4 card-modern">
+          <ProjectCard project={Projects[3]} />
+        </div>
       </div>
     </section>
   );
