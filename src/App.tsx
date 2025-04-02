@@ -1,4 +1,5 @@
 import About from "./components/About";
+import Contact from "./components/Contact";
 import Formation from "./components/Formation";
 import Hero from "./components/Hero";
 import Navigation from "./components/Navigation";
@@ -20,6 +21,8 @@ function App() {
         <Formation />
         <div className="section-divider" />
         <Project />
+        <div className="section-divider" />
+        <Contact />
         <div className="section-divider" />
       </div>
     </main>

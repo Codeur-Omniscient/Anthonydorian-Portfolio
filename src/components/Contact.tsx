@@ -1,0 +1,199 @@
+import { motion } from "motion/react";
+import { Mail, FileText, MapPin, BriefcaseBusiness } from "lucide-react";
+import { SiGithub, SiLinkedin } from "react-icons/si";
+import { FaTwitter } from "react-icons/fa";
+
+const Contact = () => {
+  // Contact methods data
+  const contactMethods = [
+    {
+      id: "email",
+      title: "Email",
+      value: "anthonymedin963@gmail.com",
+      icon: <Mail className="h-5 w-5" />,
+      link: "mailto:anthonymedin963@gmail.com",
+    },
+    {
+      id: "available",
+      title: "Available",
+      value: "Freelance | Remote",
+      icon: <BriefcaseBusiness className="h-5 w-5" />,
+    },
+    {
+      id: "location",
+      title: "Location",
+      value: "Brazzaville, Republic of Congo",
+      icon: <MapPin className="h-5 w-5" />,
+      link: "https://maps.google.com/?q=Brazzaville,+Republic of Congo",
+    },
+  ];
+
+  // Social links data
+  const socialLinks = [
+    {
+      id: "linkedin",
+      title: "LinkedIn",
+      icon: <SiLinkedin className="h-5 w-5 text-green-300" />,
+      link: "https://www.linkedin.com/in/anthony-mban/",
+    },
+    {
+      id: "github",
+      title: "GitHub",
+      icon: <SiGithub className="h-5 w-5 text-green-300" />,
+      link: "https://github.com/Codeur-Omniscient",
+    },
+    {
+      id: "twitter",
+      title: "Twitter",
+      icon: <FaTwitter className="h-5 w-5 text-green-300" />,
+      link: "https://x.com/mark_anthony242?s=21",
+    },
+    {
+      id: "resume",
+      title: "Resume",
+      icon: <FileText className="h-5 w-5 text-green-300" />,
+      link: "./Resume-Anthony.pdf",
+    },
+  ];
+
+  return (
+    <section id="contact" className="py-20 relative">
+      <div className="relative z-10 container mx-auto px-4 max-w-5xl">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="text-center max-w-3xl mx-auto mb-12"
+        >
+          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+            Get in <span className="text-green-300">Touch</span>
+          </h2>
+          <p className="text-lg text-muted-foreground">
+            Have a project in mind or just want to say hello? I'd love to hear
+            from you.
+          </p>
+        </motion.div>
+
+        <div className="grid md:grid-cols-2 gap-8 items-start">
+          {/* Left column: Contact info */}
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="bg-black/20 backdrop-blur-sm p-8 rounded-xl border shadow-md"
+          >
+            <h3 className="text-2xl font-semibold mb-6">Contact Information</h3>
+
+            <div className="space-y-6">
+              {contactMethods.map((method) => (
+                <div key={method.id} className="flex items-start gap-4 group">
+                  <div className="p-3 bg-green-700/10 rounded-lg text-green-300 group-hover:bg-green-700/20 transition-colors">
+                    {method.icon}
+                  </div>
+
+                  <div className="flex-1">
+                    <h4 className="text-sm font-medium text-muted-foreground mb-1">
+                      {method.title}
+                    </h4>
+                    <div className="flex items-center justify-between">
+                      <a
+                        href={method.link}
+                        target={method.id === "location" ? "_blank" : undefined}
+                        rel={
+                          method.id === "location"
+                            ? "noopener noreferrer"
+                            : undefined
+                        }
+                        className="text-foreground hover:text-green-300 transition-colors"
+                      >
+                        {method.value}
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <div className="mt-8 pt-8 border-t  border-gray-600/10">
+              <div className="flex items-center gap-2 mb-4">
+                <span className="w-2 h-2 bg-green-400 rounded-full"></span>
+                <span className="text-green-300 text-sm font-medium">
+                  Available for new projects
+                </span>
+              </div>
+              <p className="text-sm text-muted-foreground">
+                I'm currently taking on new projects and would love to discuss
+                how I can help bring your ideas to life.
+              </p>
+            </div>
+          </motion.div>
+
+          {/* Right column: Connect & Social */}
+          <motion.div
+            initial={{ opacity: 0, x: 20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+          >
+            {/* Connect card */}
+            <div className="bg-black/20 backdrop-blur-sm p-8 rounded-xl border shadow-md">
+              <h3 className="text-2xl font-semibold mb-6">Let's Connect</h3>
+              <p className="text-muted-foreground mb-8">
+                Whether you have a question about my work, want to discuss a
+                potential project, or just want to say hi, I'm always open to
+                connecting.
+              </p>
+
+              <div className="grid grid-cols-2 gap-4 mb-8">
+                {socialLinks.map((social) => (
+                  <a
+                    key={social.id}
+                    href={social.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 px-6 py-3 bg-[#111111] hover:bg-[#222222] transition-colors rounded-md text-white"
+                    aria-label={social.title}
+                  >
+                    {social.icon}
+                    <span>{social.title}</span>
+                  </a>
+                ))}
+              </div>
+
+              <div className="p-4 rounded-lg border">
+                <p className="text-sm text-muted-foreground italic">
+                  "I believe in creating meaningful digital experiences that not
+                  only look great but also solve real problems for users."
+                </p>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+
+        {/* Call to action */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+          className="mt-12 text-center"
+        >
+          <a
+            href="mailto:anthonymedin963@gmail.com"
+            className="inline-flex items-center gap-2 px-6 py-3 bg-green-700 hover:bg-green-600 text-white rounded-lg transition-colors"
+          >
+            <Mail className="h-4 w-4" />
+            Send me an email
+          </a>
+          <p className="mt-4 text-sm text-muted-foreground">
+            I'll get back to you as soon as possible.
+          </p>
+        </motion.div>
+      </div>
+    </section>
+  );
+};
+
+export default Contact;
