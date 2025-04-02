@@ -10,6 +10,7 @@ interface NavItem {
 
 const navItems: NavItem[] = [
   { name: "About", href: "#about" },
+  { name: "Skills", href: "#stack" },
   { name: "Learning", href: "#formation" },
   { name: "Projects", href: "#project" },
   { name: "Contact", href: "#contact" },

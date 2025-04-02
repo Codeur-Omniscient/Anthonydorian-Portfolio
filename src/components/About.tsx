@@ -2,10 +2,9 @@ import { motion } from "motion/react";
 import { Info } from "lucide-react";
 import aboutImg from "../assets/about-img.jpg";
 import { useState } from "react";
-import { databases, easterEggs, techStack, tools } from "../constant/data";
+import { easterEggs } from "../constant/data";
 
 const About = () => {
-  const [activeTab, setActiveTab] = useState("stack");
   const [activeEasterEgg, setActiveEasterEgg] = useState<string | null>(null);
   const [easterEggPosition, setEasterEggPosition] = useState({ x: 0, y: 0 });
 
@@ -172,144 +171,6 @@ const About = () => {
               and following best practices to ensure scalability and longevity
               of the projects I work on.
             </p>
-          </div>
-
-          <div className="pt-4">
-            {/* Tab Navigation */}
-            <div className="flex border-b border-green-700/30 mb-6">
-              <button
-                onClick={() => setActiveTab("stack")}
-                className={`px-4 py-2 font-medium text-sm transition-colors ${
-                  activeTab === "stack"
-                    ? "text-green-300 border-b-2 border-green-300"
-                    : "text-muted-foreground hover:text-green-300"
-                }`}
-              >
-                Stack
-              </button>
-              <button
-                onClick={() => setActiveTab("tools")}
-                className={`px-4 py-2 font-medium text-sm transition-colors ${
-                  activeTab === "tools"
-                    ? "text-green-300 border-b-2 border-green-300"
-                    : "text-muted-foreground hover:text-green-300"
-                }`}
-              >
-                Tools
-              </button>
-              <button
-                onClick={() => setActiveTab("databases")}
-                className={`px-4 py-2 font-medium text-sm transition-colors ${
-                  activeTab === "databases"
-                    ? "text-green-300 border-b-2 border-green-300"
-                    : "text-muted-foreground hover:text-green-300"
-                }`}
-              >
-                Databases
-              </button>
-            </div>
-            <div className="min-h-[200px]">
-              {/* Stack Tab */}
-              {activeTab === "stack" && (
-                <motion.div
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.3 }}
-                >
-                  <h4 className="text-xl font-semibold text-foreground mb-4">
-                    Technical Skills
-                  </h4>
-                  <div className="flex flex-wrap gap-2 mb-6">
-                    {techStack.map((tech, index) => (
-                      <div
-                        key={tech.name + index}
-                        className="flex items-center gap-2 px-3 py-1 text-sm rounded-md font-semibold"
-                        style={{
-                          backgroundColor: tech.bgColor,
-                          color: tech.textColor,
-                        }}
-                      >
-                        <span>
-                          {tech.icon && <tech.icon className="size-4" />}
-                        </span>
-                        <span>{tech.name}</span>
-                      </div>
-                    ))}
-                  </div>
-                  <p className="text-muted-foreground mt-4">
-                    I specialize in modern JavaScript frameworks with a focus on
-                    building responsive, accessible, and performant web
-                    applications.
-                  </p>
-                </motion.div>
-              )}
-
-              {/* Tools Tab */}
-              {activeTab === "tools" && (
-                <motion.div
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.3 }}
-                >
-                  <h4 className="text-xl font-semibold text-foreground mb-4">
-                    Development Tools
-                  </h4>
-                  <div className="flex flex-wrap gap-2 mb-6">
-                    {tools.map((tool, index) => (
-                      <div
-                        key={tool.name + index}
-                        className="flex items-center gap-2 px-3 py-1 text-sm rounded-md font-semibold"
-                        style={{
-                          backgroundColor: tool.bgColor,
-                          color: tool.textColor,
-                        }}
-                      >
-                        <span>
-                          {tool.icon && <tool.icon className="size-4" />}
-                        </span>
-                        <span>{tool.name}</span>
-                      </div>
-                    ))}
-                  </div>
-                  <p className="text-muted-foreground mt-4">
-                    I leverage these tools to streamline my development workflow
-                    and collaborate effectively with teams.
-                  </p>
-                </motion.div>
-              )}
-              {/* Database Tab */}
-              {activeTab === "databases" && (
-                <motion.div
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.3 }}
-                >
-                  <h4 className="text-xl font-semibold text-foreground mb-4">
-                    Databases and Storage
-                  </h4>
-                  <div className="flex flex-wrap gap-2 mb-6">
-                    {databases.map((db, index) => (
-                      <div
-                        key={db.name + index}
-                        className="flex items-center gap-2 px-3 py-1 text-sm rounded-md font-semibold"
-                        style={{
-                          backgroundColor: db.bgColor,
-                          color: db.textColor,
-                        }}
-                      >
-                        <span>{db.icon && <db.icon className="size-4" />}</span>
-                        <span>{db.name}</span>
-                      </div>
-                    ))}
-                  </div>
-                  <p className="text-muted-foreground mt-4">
-                    I have experience with both SQL and NoSQL databases, and I
-                    am comfortable working with various database management
-                    systems.
-                  </p>
-                </motion.div>
-              )}
-            </div>
           </div>
         </motion.div>
       </div>
