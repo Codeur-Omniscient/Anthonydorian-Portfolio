@@ -11,6 +11,7 @@ import {
   SiMysql,
   SiNetlify,
   SiNodedotjs,
+  SiPostgresql,
   SiPostman,
   SiReact,
   SiSupabase,
@@ -186,41 +187,6 @@ export const techStack = [
   },
 ];
 
-export const tools = [
-  { name: "Git", textColor: "#f94d27", bgColor: "#f94d274d", icon: SiGit },
-  { name: "GitHub", color: "#000000", bgColor: "#0000004d", icon: SiGithub },
-  {
-    name: "Netlify",
-    textColor: "#42cdcb",
-    bgColor: "#42cdcb4d",
-    icon: SiNetlify,
-  },
-  { name: "Figma", textColor: "#a259ff", bgColor: "#a259ff4d", icon: SiFigma },
-  {
-    name: "Postman",
-    textColor: "#ff6c36",
-    bgColor: "#ff6c364d",
-    icon: SiPostman,
-  },
-  { name: "Jira", textColor: "#2684ff", bgColor: "#2684ff4d", icon: SiJira },
-];
-
-export const databases = [
-  {
-    name: "MongoDB",
-    textColor: "#47A248",
-    bgColor: "#47A2484d",
-    icon: SiMongodb,
-  },
-  {
-    name: "Supabase",
-    textColor: "#36ba7f",
-    bgColor: "#36ba7f4d",
-    icon: SiSupabase,
-  },
-  { name: "MySQL", textColor: "#4479A1", bgColor: "#4479A14d", icon: SiMysql },
-];
-
 export const easterEggs = {
   "fullstack developer": {
     title: "Fullstack Developer",
@@ -332,5 +298,94 @@ export const education = [
     type: "online",
     description:
       "Comprehensive course covering TypeScript fundamentals, advanced types, and best practices.",
+  },
+];
+
+// Skills section data
+
+export const tabs = [
+  {
+    id: "stack",
+    label: "Stack",
+    technologies: [
+      {
+        name: "React",
+        textColor: "#61DAFB",
+        icon: SiReact,
+      },
+      {
+        name: "Typescript",
+        textColor: "#2f74c0",
+        icon: SiTypescript,
+      },
+      {
+        name: "TailwindCss",
+        textColor: "#36b7f0",
+        icon: SiTailwindcss,
+      },
+      {
+        name: "Node.js",
+        textColor: "#58a745",
+        icon: SiNodedotjs,
+      },
+      {
+        name: "ExpressJs",
+        textColor: "#5c5c5d",
+        icon: SiExpress,
+      },
+      {
+        name: "Html",
+        textColor: "#dd4b25",
+        icon: SiHtml5,
+      },
+      {
+        name: "Css",
+        textColor: "#2d53e5",
+        icon: SiCss3,
+      },
+      {
+        name: "JavaScript",
+        textColor: "#efd81d",
+        icon: SiJavascript,
+      },
+    ],
+  },
+  {
+    id: "databases",
+    label: "Databases",
+    technologies: [
+      {
+        name: "MongoDB",
+        textColor: "#47A248",
+        icon: SiMongodb,
+      },
+      {
+        name: "Supabase",
+        textColor: "#36ba7f",
+        icon: SiSupabase,
+      },
+      { name: "MySQL", textColor: "#4479A1", icon: SiMysql },
+      { name: "PostgresSQL", textColor: "#31638c", icon: SiPostgresql },
+    ],
+  },
+  {
+    id: "tools",
+    label: "Tools",
+    technologies: [
+      { name: "Git", textColor: "#f94d27", icon: SiGit },
+      { name: "GitHub", color: "#000000", icon: SiGithub },
+      {
+        name: "Netlify",
+        textColor: "#42cdcb",
+        icon: SiNetlify,
+      },
+      { name: "Figma", textColor: "#a259ff", icon: SiFigma },
+      {
+        name: "Postman",
+        textColor: "#ff6c36",
+        icon: SiPostman,
+      },
+      { name: "Jira", textColor: "#2684ff", icon: SiJira },
+    ],
   },
 ];
