@@ -1,5 +1,6 @@
 import About from "./components/About";
 import Contact from "./components/Contact";
+import Footer from "./components/Footer";
 import Formation from "./components/Formation";
 import Hero from "./components/Hero";
 import Navigation from "./components/Navigation";
@@ -8,10 +9,10 @@ import Stack from "./components/Stack";
 
 function App() {
   return (
-    <main className="min-h-screen bg-background text-foreground overflow-hidden">
+    <main className="min-h-screen overflow-hidden bg-background text-foreground">
       <Navigation />
 
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
+      <div className="container mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <Hero />
         <div className="section-divider" />
         <About />
@@ -24,6 +25,7 @@ function App() {
         <div className="section-divider" />
         <Contact />
         <div className="section-divider" />
+        <Footer />
       </div>
     </main>
   );
