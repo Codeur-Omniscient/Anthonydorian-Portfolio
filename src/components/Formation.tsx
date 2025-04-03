@@ -28,7 +28,7 @@ const item = {
 
 export default function Formation() {
   return (
-    <section id="formation" className="py-20 relative">
+    <section id="learning" className="relative py-20">
       <div className="section-title">
         <div>
           <h2>
@@ -40,7 +40,7 @@ export default function Formation() {
         </div>
       </div>
 
-      <div className="grid md:grid-cols-2 gap-12">
+      <div className="grid gap-12 md:grid-cols-2">
         {/* Education */}
         <div>
           <motion.h3
@@ -48,10 +48,10 @@ export default function Formation() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="text-xl font-semibold mb-8 text-foreground flex items-center"
+            className="mb-8 flex items-center text-xl font-semibold text-foreground"
           >
-            <GraduationCap className="h-5 w-5 mr-2 text-green-300" />
-            <div className="h-6 w-1 bg-green-700 mr-3 rounded-full"></div>
+            <GraduationCap className="mr-2 h-5 w-5 text-green-300" />
+            <div className="mr-3 h-6 w-1 rounded-full bg-green-700"></div>
             Education
           </motion.h3>
 
@@ -68,10 +68,10 @@ export default function Formation() {
                 <motion.div
                   key={edu.name + index}
                   variants={item}
-                  className="p-4 rounded-lg bg-[#111111] border border-green-700/20 hover:border-green-500/40 transition-colors"
+                  className="rounded-lg border border-green-700/20 bg-[#111111] p-4 transition-colors hover:border-green-500/40"
                 >
                   <div className="flex items-start gap-3">
-                    <div className="w-10 h-10 rounded-full bg-green-700/20 flex items-center justify-center text-green-300">
+                    <div className="flex h-10 w-10 items-center justify-center rounded-full bg-green-700/20 text-green-300">
                       <GraduationCap className="h-5 w-5" />
                     </div>
                     <div>
@@ -81,7 +81,7 @@ export default function Formation() {
                       <p className="text-sm text-green-300">
                         {edu.institution}
                       </p>
-                      <p className="text-xs text-muted-foreground mb-2">
+                      <p className="mb-2 text-xs text-muted-foreground">
                         {edu.location && `${edu.location} • `}
                         {edu.date}
                       </p>
@@ -99,10 +99,10 @@ export default function Formation() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="text-xl font-semibold my-8 text-foreground flex items-center"
+            className="my-8 flex items-center text-xl font-semibold text-foreground"
           >
-            <BookOpen className="h-5 w-5 mr-2 text-green-300" />
-            <div className="h-6 w-1 bg-green-700 mr-3 rounded-full"></div>
+            <BookOpen className="mr-2 h-5 w-5 text-green-300" />
+            <div className="mr-3 h-6 w-1 rounded-full bg-green-700"></div>
             Online Courses
           </motion.h3>
 
@@ -119,10 +119,10 @@ export default function Formation() {
                 <motion.div
                   key={edu.name + index}
                   variants={item}
-                  className="p-4 rounded-lg bg-[#111111] border border-green-700/20 hover:border-green-500/40 transition-colors"
+                  className="rounded-lg border border-green-700/20 bg-[#111111] p-4 transition-colors hover:border-green-500/40"
                 >
                   <div className="flex items-start gap-3">
-                    <div className="w-10 h-10 rounded-full bg-green-700/20 flex items-center justify-center text-green-300">
+                    <div className="flex h-10 w-10 items-center justify-center rounded-full bg-green-700/20 text-green-300">
                       <BookOpen className="h-5 w-5" />
                     </div>
                     <div>
@@ -132,7 +132,7 @@ export default function Formation() {
                       <p className="text-sm text-green-300">
                         {edu.institution}
                       </p>
-                      <p className="text-xs text-muted-foreground mb-2">
+                      <p className="mb-2 text-xs text-muted-foreground">
                         {edu.date}
                       </p>
                       <p className="text-sm text-muted-foreground">
@@ -152,10 +152,10 @@ export default function Formation() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="text-xl font-semibold mb-8 text-foreground flex items-center"
+            className="mb-8 flex items-center text-xl font-semibold text-foreground"
           >
-            <Award className="h-5 w-5 mr-2 text-green-300" />
-            <div className="h-6 w-1 bg-green-700 mr-3 rounded-full"></div>
+            <Award className="mr-2 h-5 w-5 text-green-300" />
+            <div className="mr-3 h-6 w-1 rounded-full bg-green-700"></div>
             Certifications
           </motion.h3>
 
@@ -170,11 +170,11 @@ export default function Formation() {
               <motion.div
                 key={cert.name + index}
                 variants={item}
-                className="p-4 rounded-lg bg-[#111111] border border-green-700/20 hover:border-green-500/40 transition-colors"
+                className="rounded-lg border border-green-700/20 bg-[#111111] p-4 transition-colors hover:border-green-500/40"
               >
                 <div className="flex items-center gap-3">
                   <div
-                    className="w-10 h-10 rounded-full flex items-center justify-center text-white text-xs"
+                    className="flex h-10 w-10 items-center justify-center rounded-full text-xs text-white"
                     style={{ backgroundColor: cert.color }}
                   >
                     FCC
