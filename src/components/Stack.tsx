@@ -29,7 +29,7 @@ const item = {
 const Stack = () => {
   const [activeTab, setActiveTab] = useState("stack");
   return (
-    <section id="stack" className="py-20 relative">
+    <section id="skills" className="relative py-20">
       <div className="section-title">
         <div>
           <h2>
@@ -43,12 +43,12 @@ const Stack = () => {
       </div>
 
       {/* Tab Navigation */}
-      <div className="flex flex-wrap justify-center mb-12 border-b border-green-700/20">
+      <div className="mb-12 flex flex-wrap justify-center border-b border-green-700/20">
         {tabs.map((tab) => (
           <button
             key={tab.id}
             onClick={() => setActiveTab(tab.id)}
-            className={`px-6 py-3 text-sm md:text-base font-medium transition-colors relative ${
+            className={`relative px-6 py-3 text-sm font-medium transition-colors md:text-base ${
               activeTab === tab.id
                 ? "text-green-300"
                 : "text-muted-foreground hover:text-green-300/70"
@@ -82,7 +82,7 @@ const Stack = () => {
             variants={container}
             initial="hidden"
             animate="show"
-            className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6"
+            className="grid grid-cols-2 gap-6 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5"
           >
             {tabs
               .find((tab) => tab.id === activeTab)
@@ -90,9 +90,9 @@ const Stack = () => {
                 <motion.div
                   key={tech.name}
                   variants={item}
-                  className="card-modern p-4 hover:border-green-500/40 transition-all duration-300 flex flex-col items-center justify-center text-center"
+                  className="card-modern flex flex-col items-center justify-center p-4 text-center transition-all duration-300 hover:border-green-500/40"
                 >
-                  <div className="text-4xl mb-3 hover:scale-110 transition-transform duration-300">
+                  <div className="mb-3 text-4xl transition-transform duration-300 hover:scale-110">
                     {tech.icon && <tech.icon color={tech.textColor} />}
                   </div>
                   <h4 className="text-sm font-medium">{tech.name}</h4>
