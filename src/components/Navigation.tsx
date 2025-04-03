@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "motion/react";
-import { X, Menu } from "lucide-react";
+import { X, Menu, Terminal } from "lucide-react";
 
 // Type pour les éléments de navigation
 interface NavItem {
@@ -10,9 +10,9 @@ interface NavItem {
 
 const navItems: NavItem[] = [
   { name: "About", href: "#about" },
-  { name: "Skills", href: "#stack" },
-  { name: "Learning", href: "#formation" },
-  { name: "Projects", href: "#project" },
+  { name: "Skills", href: "#skills" },
+  { name: "Learning", href: "#learning" },
+  { name: "Project", href: "#project" },
   { name: "Contact", href: "#contact" },
 ];
 
@@ -47,7 +47,7 @@ const Navigation = () => {
   // Fonction pour gérer le scroll smooth vers les sections
   const handleScrollToSection = (
     e: React.MouseEvent<HTMLAnchorElement>,
-    href: string
+    href: string,
   ): void => {
     e.preventDefault();
     const targetId = href.substring(1); // Enlever le # du href
@@ -75,24 +75,12 @@ const Navigation = () => {
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
-        className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border/20"
+        className="fixed left-0 right-0 top-0 z-50 border-b border-border/20 backdrop-blur-md"
       >
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
-          <div className="flex items-center justify-between h-16">
-            <a
-              href="#home"
-              className="flex items-center space-x-2"
-              onClick={(e) => handleScrollToSection(e, "#home")}
-            >
-              <div className="w-8 h-8 rounded-full bg-green-700 flex items-center justify-center text-white font-bold">
-                C
-              </div>
-              <span className="text-lg font-bold gradient-text">
-                Anthony.dev
-              </span>
-            </a>
-
-            <nav className="hidden md:flex items-center space-x-8">
+        <div className="container mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <div className="flex h-16 items-center justify-between">
+            <Terminal className="h-5 w-5 text-green-300 md:h-7 md:w-7" />
+            <nav className="hidden items-center space-x-8 md:flex">
               {navItems.map((item) => (
                 <a
                   key={item.name}
@@ -110,7 +98,7 @@ const Navigation = () => {
             </nav>
 
             <button
-              className="md:hidden text-muted-foreground hover:text-foreground"
+              className="text-muted-foreground hover:text-foreground md:hidden"
               onClick={() => setMobileMenuOpen(true)}
             >
               <Menu className="h-6 w-6" />
@@ -122,13 +110,8 @@ const Navigation = () => {
       {/* Mobile Menu */}
       <div className={`mobile-menu ${mobileMenuOpen ? "open" : ""}`}>
         <div className="p-6">
-          <div className="flex justify-between items-center mb-8">
-            <div className="flex items-center space-x-2">
-              <div className="w-8 h-8 rounded-full bg-green-700 flex items-center justify-center text-white font-bold">
-                C
-              </div>
-              <span className="text-lg font-bold">Codeur</span>
-            </div>
+          <div className="mb-8 flex items-center justify-between">
+            <Terminal className="h-5 w-5 text-green-300" />
 
             <button
               onClick={() => setMobileMenuOpen(false)}
@@ -138,7 +121,7 @@ const Navigation = () => {
             </button>
           </div>
 
-          <nav className="flex flex-col space-y-6 mb-8">
+          <nav className="mb-8 flex flex-col space-y-6">
             {navItems.map((item) => (
               <a
                 key={item.name}

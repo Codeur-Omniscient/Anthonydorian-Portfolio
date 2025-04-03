@@ -54,9 +54,8 @@ const Footer = () => {
               </span>
             </a>
             <p className="mb-6 text-muted-foreground">
-              Passionate and creative fullstack developer with a focus on
-              building elegant, user-friendly interfaces while enhancing my
-              skills along the way.
+              Fullstack developer passionate about building elegant,
+              user-friendly and functional interfaces.
             </p>
             <div className="flex gap-4">
               <a

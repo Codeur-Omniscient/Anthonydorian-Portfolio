@@ -1,5 +1,4 @@
 import { motion } from "motion/react";
-import { Info } from "lucide-react";
 import aboutImg from "../assets/about-img.jpg";
 import { useState } from "react";
 import { easterEggs } from "../constant/data";
@@ -23,7 +22,7 @@ const About = () => {
   };
 
   return (
-    <section id="about" className="py-20 relative">
+    <section id="about" className="relative py-20">
       <div className="section-title">
         <div>
           <h2>
@@ -32,13 +31,13 @@ const About = () => {
         </div>
       </div>
 
-      <div className="grid md:grid-cols-5 gap-12 items-start">
+      <div className="grid items-start gap-12 md:grid-cols-5">
         <motion.div
           initial={{ opacity: 0, x: -50, filter: "blur(8px)" }}
           whileInView={{ opacity: 1, x: 0, filter: "blur(0px)" }}
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
-          className="md:col-span-2 relative"
+          className="relative md:col-span-2"
         >
           <div className="relative">
             {/* <div className="absolute -top-4 -left-4 w-full h-full border border-green-700 rounded-lg"></div> */}
@@ -76,13 +75,13 @@ const About = () => {
           whileInView={{ opacity: 1, x: 0, filter: "blur(0px)" }}
           viewport={{ once: true }}
           transition={{ duration: 0.7, delay: 0.2 }}
-          className="md:col-span-3 space-y-6 text-muted-foreground"
+          className="space-y-6 text-muted-foreground md:col-span-3"
         >
-          <div className="text-lg interactive-text">
+          <div className="interactive-text text-lg">
             <p>
               I'm a passionate{" "}
               <button
-                className="cursor-help easter-egg-trigger"
+                className="easter-egg-trigger cursor-help"
                 onMouseEnter={(e) =>
                   handleEasterEggHover("fullstack developer", e)
                 }
@@ -93,7 +92,7 @@ const About = () => {
               with a strong focus on frontend and{" "}
               <button
                 type="button"
-                className="cursor-help easter-egg-trigger"
+                className="easter-egg-trigger cursor-help"
                 onMouseEnter={(e) => handleEasterEggHover("UI/UX design", e)}
                 onMouseLeave={handleEasterEggLeave}
                 // onFocus={(e) => handleEasterEggHover("UI/UX design", e)}
@@ -104,7 +103,7 @@ const About = () => {
               . My journey in web development started with a curiosity about how
               websites work, which led me to dive deep into{" "}
               <button
-                className="cursor-help easter-egg-trigger"
+                className="easter-egg-trigger cursor-help"
                 onMouseEnter={(e) =>
                   handleEasterEggHover("modern web technologies", e)
                 }
@@ -118,7 +117,7 @@ const About = () => {
             <p className="mt-4">
               With a background in both{" "}
               <button
-                className="cursor-help easter-egg-trigger"
+                className="easter-egg-trigger cursor-help"
                 onMouseEnter={(e) =>
                   handleEasterEggHover("design and development", e)
                 }
@@ -136,7 +135,7 @@ const About = () => {
               My goal is to create digital experiences that are not only
               visually appealing but also{" "}
               <button
-                className="cursor-help easter-egg-trigger"
+                className="easter-egg-trigger cursor-help"
                 onMouseEnter={(e) => handleEasterEggHover("accessible", e)}
                 onMouseLeave={handleEasterEggLeave}
               >
@@ -144,7 +143,7 @@ const About = () => {
               </button>
               ,{" "}
               <button
-                className="cursor-help easter-egg-trigger"
+                className="easter-egg-trigger cursor-help"
                 onMouseEnter={(e) => handleEasterEggHover("performant", e)}
                 onMouseLeave={handleEasterEggLeave}
               >
@@ -152,7 +151,7 @@ const About = () => {
               </button>
               , and{" "}
               <button
-                className="cursor-help easter-egg-trigger"
+                className="easter-egg-trigger cursor-help"
                 onMouseEnter={(e) => handleEasterEggHover("intuitive", e)}
                 onMouseLeave={handleEasterEggLeave}
               >
@@ -160,7 +159,7 @@ const About = () => {
               </button>
               . I believe in writing{" "}
               <button
-                className="cursor-help easter-egg-trigger"
+                className="easter-egg-trigger cursor-help"
                 onMouseEnter={(e) =>
                   handleEasterEggHover("clean, maintainable code", e)
                 }
@@ -181,13 +180,13 @@ const About = () => {
           animate={{ opacity: 1, scale: 1 }}
           exit={{ opacity: 0, scale: 0.8 }}
           transition={{ duration: 0.2 }}
-          className="fixed z-50 w-64 bg-[#0a0a0a] border border-green-700/30 rounded-lg shadow-lg p-4"
+          className="fixed z-50 w-64 rounded-lg border border-green-700/30 bg-[#0a0a0a] p-4 shadow-lg"
           style={{
             left: `${Math.min(easterEggPosition.x, window.innerWidth - 280)}px`,
             top: `${easterEggPosition.y + 20}px`,
           }}
         >
-          <div className="flex items-center gap-2 mb-2">
+          <div className="mb-2 flex items-center gap-2">
             <span className="text-xl">
               {easterEggs[activeEasterEgg as keyof typeof easterEggs].icon}
             </span>
@@ -200,12 +199,6 @@ const About = () => {
           </p>
         </motion.div>
       )}
-
-      {/* Small hint for users */}
-      <div className="absolute bottom-2 right-2 text-xs text-muted-foreground/40 flex items-center gap-1">
-        <Info className="h-3 w-3" />
-        <span>Hover over highlighted text for more info</span>
-      </div>
     </section>
   );
 };
