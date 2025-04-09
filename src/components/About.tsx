@@ -1,5 +1,5 @@
 import { motion } from "motion/react";
-import aboutImg from "../assets/about-img.jpg";
+import aboutImg from "../assets/about-img.webp";
 import { useState } from "react";
 import { easterEggs } from "../constant/data";
 import { ScrollAnimationWrapper } from "./ScrollAnimationWrapper";

@@ -11,7 +11,6 @@ const Contact = () => {
       title: "Email",
       value: "anthonymedin963@gmail.com",
       icon: <Mail className="h-5 w-5" />,
-      link: "mailto:anthonymedin963@gmail.com",
     },
     {
       id: "available",
@@ -24,7 +23,6 @@ const Contact = () => {
       title: "Location",
       value: "Brazzaville, Republic of Congo",
       icon: <MapPin className="h-5 w-5" />,
-      link: "https://maps.google.com/?q=Brazzaville,+Republic of Congo",
     },
   ];
 
@@ -98,18 +96,9 @@ const Contact = () => {
                       {method.title}
                     </h4>
                     <div className="flex items-center justify-between text-sm md:text-base">
-                      <a
-                        href={method.link}
-                        target={method.id === "location" ? "_blank" : undefined}
-                        rel={
-                          method.id === "location"
-                            ? "noopener noreferrer"
-                            : undefined
-                        }
-                        className="text-foreground transition-colors hover:text-green-300"
-                      >
+                      <span className="text-foreground transition-colors hover:text-green-300">
                         {method.value}
-                      </a>
+                      </span>
                     </div>
                   </div>
                 </div>

@@ -18,10 +18,10 @@ import {
   SiTailwindcss,
   SiTypescript,
 } from "react-icons/si";
-import mortgageImg from "../assets/preview.jpg";
-import pokedexImg from "../assets/Pokedex-Screenshot.jpg";
-import pulseImg from "../assets/Pulse-Screenshot.jpg";
-import tutorifyImg from "../assets/Tutorify-Screenshot.jpg";
+import mortgageImg from "../assets/preview.webp";
+import pokedexImg from "../assets/Pokedex-Screenshot.webp";
+import pulseImg from "../assets/Pulse-Screenshot.webp";
+import tutorifyImg from "../assets/Tutorify-Screenshot.webp";
 
 // Projects section data
 export const Projects = [

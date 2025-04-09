@@ -13,6 +13,7 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
           src={project.image}
           alt="Project banner"
           className="h-60 object-cover object-center"
+          loading="lazy"
         />
       </div>
       <div className="flex flex-col gap-3 px-4 pb-2 pt-1">
