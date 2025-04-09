@@ -63,6 +63,7 @@ const Footer = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-2 transition-all duration-300 hover:scale-110"
+                aria-label="GitHub Profile"
               >
                 <SiGithub className="h-5 w-5 text-green-300" />
               </a>
@@ -71,6 +72,7 @@ const Footer = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-2 transition-all duration-300 hover:scale-110"
+                aria-label="LinkedIn Profile"
               >
                 <SiLinkedin className="h-5 w-5 text-green-300" />
               </a>
@@ -79,12 +81,14 @@ const Footer = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-2 transition-all duration-300 hover:scale-110"
+                aria-label="Twitter Profile"
               >
                 <FaTwitter className="h-5 w-5 text-green-300" />
               </a>
               <a
                 href="mailto:anthonymedin963@gmail.com"
                 className="p-2 transition-all duration-300 hover:scale-110"
+                aria-label="Email"
               >
                 <Mail className="h-5 w-5 text-green-300" />
               </a>
@@ -143,6 +147,7 @@ const Footer = () => {
                   <a
                     href={project.link}
                     className="flex items-center gap-2 text-muted-foreground transition-colors hover:text-green-300"
+                    aria-label={`View ${project.name} project`}
                   >
                     {project.name}
                     <ExternalLink className="h-3 w-3" />

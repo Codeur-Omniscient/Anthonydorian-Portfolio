@@ -100,6 +100,7 @@ const Navigation = () => {
             <button
               className="text-muted-foreground hover:text-foreground md:hidden"
               onClick={() => setMobileMenuOpen(true)}
+              aria-label="Open menu"
             >
               <Menu className="h-6 w-6" />
             </button>
@@ -116,6 +117,7 @@ const Navigation = () => {
             <button
               onClick={() => setMobileMenuOpen(false)}
               className="text-muted-foreground hover:text-foreground"
+              aria-label="Close menu"
             >
               <X className="h-6 w-6" />
             </button>
