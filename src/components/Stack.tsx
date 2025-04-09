@@ -45,12 +45,7 @@ const Stack = () => {
         </div>
       </ScrollAnimationWrapper>
       {/* Tab Navigation */}
-      <StaggerContainer
-        variant="fade"
-        staggerDelay={0.15}
-        delay={0.2}
-        className="mb-12 flex flex-wrap justify-center border-b border-green-700/20"
-      >
+      <div className="mb-12 flex flex-wrap justify-center border-b border-green-700/20">
         {tabs.map((tab) => (
           <button
             key={tab.id}
@@ -73,7 +68,7 @@ const Stack = () => {
             )}
           </button>
         ))}
-      </StaggerContainer>
+      </div>
 
       {/* Tab Content */}
       <AnimatePresence mode="wait">
@@ -102,7 +97,7 @@ const Stack = () => {
                   <div className="mb-3 text-4xl transition-transform duration-300 hover:scale-110">
                     {tech.icon && <tech.icon color={tech.textColor} />}
                   </div>
-                  <h4 className="text-sm font-medium">{tech.name}</h4>
+                  <h3 className="text-sm font-medium">{tech.name}</h3>
                 </motion.div>
               ))}
           </motion.div>

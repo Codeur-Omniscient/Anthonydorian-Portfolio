@@ -18,7 +18,12 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
       <div className="flex flex-col gap-3 px-4 pb-2 pt-1">
         <div className="flex items-center justify-between text-lg font-semibold">
           <h3>{project.title}</h3>
-          <a href={project.link} target="_blank" rel="noopener noreferrer">
+          <a
+            href={project.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="View project"
+          >
             <ExternalLink className="h-5 w-5 cursor-pointer text-inherit" />
           </a>
         </div>

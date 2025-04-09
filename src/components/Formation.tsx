@@ -78,9 +78,9 @@ export default function Formation() {
                       <GraduationCap className="h-5 w-5" />
                     </div>
                     <div>
-                      <h5 className="font-medium text-foreground">
+                      <h4 className="font-medium text-foreground">
                         {edu.name}
-                      </h5>
+                      </h4>
                       <p className="text-sm text-green-300">
                         {edu.institution}
                       </p>
@@ -129,9 +129,9 @@ export default function Formation() {
                       <BookOpen className="h-5 w-5" />
                     </div>
                     <div>
-                      <h5 className="font-medium text-foreground">
+                      <h4 className="font-medium text-foreground">
                         {edu.name}
-                      </h5>
+                      </h4>
                       <p className="text-sm text-green-300">
                         {edu.institution}
                       </p>
@@ -183,7 +183,7 @@ export default function Formation() {
                     FCC
                   </div>
                   <div>
-                    <h5 className="font-medium text-foreground">{cert.name}</h5>
+                    <h4 className="font-medium text-foreground">{cert.name}</h4>
                     <p className="text-xs text-muted-foreground">
                       {cert.issuer} • {cert.date}
                     </p>

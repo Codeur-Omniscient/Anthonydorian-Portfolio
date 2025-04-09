@@ -183,6 +183,7 @@ const Contact = () => {
           <a
             href="mailto:anthonymedin963@gmail.com"
             className="inline-flex items-center gap-2 rounded-lg bg-green-700 px-6 py-3 text-white transition-colors hover:bg-green-600"
+            aria-label="Send me an email"
           >
             <Mail className="h-4 w-4" />
             Send me an email
