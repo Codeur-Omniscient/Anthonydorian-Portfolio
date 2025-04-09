@@ -132,6 +132,29 @@ export function StaggerContainer({
   threshold = 0.2,
   once = true,
 }: Readonly<StaggerContainerProps>) {
+  const animations = {
+    fade: {
+      initial: { opacity: 0 },
+      animate: { opacity: 1 },
+    },
+    "slide-up": {
+      initial: { opacity: 0, y: 50 },
+      animate: { opacity: 1, y: 0 },
+    },
+    "slide-right": {
+      initial: { opacity: 0, x: -50 },
+      animate: { opacity: 1, x: 0 },
+    },
+    "slide-left": {
+      initial: { opacity: 0, x: 50 },
+      animate: { opacity: 1, x: 0 },
+    },
+    none: {
+      initial: {},
+      animate: {},
+    },
+  };
+
   const ref = useRef<HTMLDivElement>(null);
   const isInView = useInView(ref, { once, amount: threshold });
 
@@ -179,7 +202,10 @@ export function StaggerContainer({
     >
       {Array.isArray(children)
         ? children.map((child, index) => (
-            <motion.div key={index} variants={childVariants}>
+            <motion.div
+              key={child.key || `stagger-child-${index}`}
+              variants={childVariants}
+            >
               {child}
             </motion.div>
           ))
@@ -187,31 +213,3 @@ export function StaggerContainer({
     </motion.div>
   );
 }
-
-// Animation variants for export and reuse
-export const animations = {
-  fade: {
-    initial: { opacity: 0 },
-    animate: { opacity: 1 },
-  },
-  "slide-up": {
-    initial: { opacity: 0, y: 50 },
-    animate: { opacity: 1, y: 0 },
-  },
-  "slide-right": {
-    initial: { opacity: 0, x: -50 },
-    animate: { opacity: 1, x: 0 },
-  },
-  "slide-left": {
-    initial: { opacity: 0, x: 50 },
-    animate: { opacity: 1, x: 0 },
-  },
-  zoom: {
-    initial: { opacity: 0, scale: 0.9 },
-    animate: { opacity: 1, scale: 1 },
-  },
-  none: {
-    initial: {},
-    animate: {},
-  },
-};
