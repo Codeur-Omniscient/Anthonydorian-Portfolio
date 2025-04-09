@@ -61,7 +61,7 @@ const About = () => {
           whileInView={{ opacity: 1, x: 0, filter: "blur(0px)" }}
           viewport={{ once: true }}
           transition={{ duration: 0.7, delay: 0.2 }}
-          className="space-y-6 text-muted-foreground md:col-span-3"
+          className="space-y-6 text-muted-foreground md:col-span-3 lg:mt-12"
         >
           <div className="interactive-text text-lg">
             <p>

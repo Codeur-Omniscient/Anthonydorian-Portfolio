@@ -9,7 +9,7 @@ const Hero = () => {
         <motion.div
           initial={{ opacity: 0, y: 20, filter: "blur(8px)" }}
           animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-          transition={{ duration: 0.7 }}
+          transition={{ duration: 0.4 }}
           className="max-w-3xl"
         >
           <div className="mb-8 inline-flex items-center rounded-full border border-green-700/30 bg-green-700/5 px-3 py-1 text-sm text-green-300">
