@@ -40,7 +40,6 @@ const About = () => {
           className="relative md:col-span-2"
         >
           <div className="relative">
-            {/* <div className="absolute -top-4 -left-4 w-full h-full border border-green-700 rounded-lg"></div> */}
             <div className="relative z-10 overflow-hidden rounded-lg">
               <img
                 src={aboutImg}
@@ -51,22 +50,6 @@ const About = () => {
                 loading="lazy"
               />
             </div>
-            {/* <div className="absolute bottom-4 right-4 p-2 bg-background border border-green-700 rounded-lg">
-              <svg
-                width="80"
-                height="30"
-                viewBox="0 0 120 40"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M10 30C20 10 30 25 40 20C50 15 60 30 70 25C80 20 90 10 110 30"
-                  stroke="#8B5A2B"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                />
-              </svg>
-            </div> */}
           </div>
         </motion.div>
 
