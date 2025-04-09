@@ -1,6 +1,7 @@
 import { motion } from "motion/react";
 import { Award, GraduationCap, BookOpen } from "lucide-react";
 import { certifications, education } from "../constant/data";
+import { ScrollAnimationWrapper } from "./ScrollAnimationWrapper";
 
 const container = {
   hidden: { opacity: 0 },
@@ -29,16 +30,18 @@ const item = {
 export default function Formation() {
   return (
     <section id="learning" className="relative py-20">
-      <div className="section-title">
-        <div>
-          <h2>
-            My <span className="accent-text">Training</span>
-          </h2>
-          <p className="subtitle">
-            Education, certifications, and continuous learning
-          </p>
+      <ScrollAnimationWrapper variant="slide-up">
+        <div className="section-title">
+          <div>
+            <h2>
+              My <span className="accent-text">Training</span>
+            </h2>
+            <p className="subtitle">
+              Education, certifications, and continuous learning
+            </p>
+          </div>
         </div>
-      </div>
+      </ScrollAnimationWrapper>
 
       <div className="grid gap-12 md:grid-cols-2">
         {/* Education */}

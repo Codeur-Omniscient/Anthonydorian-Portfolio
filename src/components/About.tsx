@@ -2,6 +2,7 @@ import { motion } from "motion/react";
 import aboutImg from "../assets/about-img.jpg";
 import { useState } from "react";
 import { easterEggs } from "../constant/data";
+import { ScrollAnimationWrapper } from "./ScrollAnimationWrapper";
 
 const About = () => {
   const [activeEasterEgg, setActiveEasterEgg] = useState<string | null>(null);
@@ -23,13 +24,15 @@ const About = () => {
 
   return (
     <section id="about" className="relative py-20">
-      <div className="section-title">
-        <div>
-          <h2>
-            About <span className="accent-text">Me</span>
-          </h2>
+      <ScrollAnimationWrapper variant="slide-up">
+        <div className="section-title">
+          <div>
+            <h2>
+              About <span className="accent-text">Me</span>
+            </h2>
+          </div>
         </div>
-      </div>
+      </ScrollAnimationWrapper>
 
       <div className="grid items-start gap-12 md:grid-cols-5">
         <motion.div

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { tabs } from "../constant/data";
+import { ScrollAnimationWrapper } from "./ScrollAnimationWrapper";
 
 const container = {
   hidden: { opacity: 0 },
@@ -30,20 +31,26 @@ const Stack = () => {
   const [activeTab, setActiveTab] = useState("stack");
   return (
     <section id="skills" className="relative py-20">
-      <div className="section-title">
-        <div>
-          <h2>
-            Stack & <span className="accent-text">Tools</span>
-          </h2>
-          <p className="subtitle">
-            This is my tech stack to create a fast, responsive, and maintainable
-            website that delivers an exceptional user experience.
-          </p>
+      <ScrollAnimationWrapper variant="slide-up">
+        <div className="section-title">
+          <div>
+            <h2>
+              Stack & <span className="accent-text">Tools</span>
+            </h2>
+            <p className="subtitle">
+              This is my tech stack to create a fast, responsive, and
+              maintainable website that delivers an exceptional user experience.
+            </p>
+          </div>
         </div>
-      </div>
-
+      </ScrollAnimationWrapper>
       {/* Tab Navigation */}
-      <div className="mb-12 flex flex-wrap justify-center border-b border-green-700/20">
+      <StaggerContainer
+        variant="fade"
+        staggerDelay={0.15}
+        delay={0.2}
+        className="mb-12 flex flex-wrap justify-center border-b border-green-700/20"
+      >
         {tabs.map((tab) => (
           <button
             key={tab.id}
@@ -66,7 +73,7 @@ const Stack = () => {
             )}
           </button>
         ))}
-      </div>
+      </StaggerContainer>
 
       {/* Tab Content */}
       <AnimatePresence mode="wait">
