@@ -8,9 +8,9 @@ import { locizePlugin } from "locize";
 const isDev = import.meta.env.DEV;
 
 const locizeOptions = {
-  projectId: "",
-  apiKey: "",
-  version: "latest",
+  projectId: import.meta.env.VITE_LOCIZE_PROJECTID,
+  apiKey: import.meta.env.VITE_LOCIZE_APIKEY,
+  version: import.meta.env.VITE_LOCIZE_VERSION,
 };
 
 if (isDev) {
