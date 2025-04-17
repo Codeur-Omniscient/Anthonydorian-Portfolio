@@ -23,15 +23,9 @@ importers:
       i18next-browser-languagedetector:
         specifier: ^8.0.4
         version: 8.0.4
-      i18next-locize-backend:
-        specifier: ^7.0.4
-        version: 7.0.4(encoding@0.1.13)
-      locize:
-        specifier: ^4.0.13
-        version: 4.0.13
-      locize-lastused:
-        specifier: ^4.0.2
-        version: 4.0.2(encoding@0.1.13)
+      i18next-http-backend:
+        specifier: ^3.0.2
+        version: 3.0.2(encoding@0.1.13)
       lucide-react:
         specifier: ^0.483.0
         version: 0.483.0(react@19.0.0)
@@ -404,15 +398,6 @@ packages:
   '@eslint/plugin-kit@0.2.7':
     resolution: {integrity: sha512-JubJ5B2pJ4k4yGxaNLdbjrnk9d/iDz6/q8wOilpIowd6PJPgaxCuHBnBszq7Ce2TyMrywm5r4PnKm6V3iiZF+g==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
-
-  '@floating-ui/core@1.6.9':
-    resolution: {integrity: sha512-uMXCuQ3BItDUbAMhIXw7UPXRfAlOAvZzdK9BWpE60MCn+Svt3aLn9jsPTi/WNGlRUu2uI0v5S7JiIUsbsvh3fw==}
-
-  '@floating-ui/dom@1.6.13':
-    resolution: {integrity: sha512-umqzocjDgNRGTuO7Q8CU32dkHkECqI8ZdMZ5Swb6QAM0t5rnlrN3lGo1hdpscRd3WS8T6DKYK4ephgIH9iRh3w==}
-
-  '@floating-ui/utils@0.2.9':
-    resolution: {integrity: sha512-MDWhGtE+eHw5JW7lq4qhc5yRLS11ERl1c7Z6Xd0a58DozHES6EnNNwUWbMiG4J9Cgj053Bhk8zvlhFYKVhULwg==}
 
   '@fluent/syntax@0.19.0':
     resolution: {integrity: sha512-5D2qVpZrgpjtqU4eNOcWGp1gnUCgjfM+vKGE2y03kKN6z5EBhtx0qdRFbg8QuNNj8wXNoX93KJoYb+NqoxswmQ==}
@@ -839,9 +824,6 @@ packages:
   cross-fetch@4.0.0:
     resolution: {integrity: sha512-e4a5N8lVvuLgAWgnCrLr2PP0YyDOTHa9H/Rj54dirp61qXnNq46m82bRhNqIA5VccJtWBvPTFRV3TtvHUKPB1g==}
 
-  cross-fetch@4.1.0:
-    resolution: {integrity: sha512-uKm5PU+MHTootlWEY+mZ4vvXoCn4fLQxT9dSc1sXVMSFkINTJVN8cAQROpwcKm8bJ/c7rgZVIBWzH5T78sNZZw==}
-
   cross-spawn@7.0.6:
     resolution: {integrity: sha512-uV2QOWP2nWzsy2aMp8aRibhi9dlzF5Hgh5SHaB9OiTGEyDTiJJyx0uy51QXdyWbtAHNua4XJzUKca3OzKUd3vA==}
     engines: {node: '>= 8'}
@@ -1121,15 +1103,12 @@ packages:
   i18next-browser-languagedetector@8.0.4:
     resolution: {integrity: sha512-f3frU3pIxD50/Tz20zx9TD9HobKYg47fmAETb117GKGPrhwcSSPJDoCposXlVycVebQ9GQohC3Efbpq7/nnJ5w==}
 
-  i18next-locize-backend@7.0.4:
-    resolution: {integrity: sha512-saRyIQAX0k+YA6XzirU6cyudWDj1W7bGDz/Szq+8OIs3JJnNuMZCADuNgCwmo+dQm9P69bbALymV+9t9ffywBA==}
+  i18next-http-backend@3.0.2:
+    resolution: {integrity: sha512-PdlvPnvIp4E1sYi46Ik4tBYh/v/NbYfFFgTjkwFl0is8A18s7/bx9aXqsrOax9WUbeNS6mD2oix7Z0yGGf6m5g==}
 
   i18next-resources-for-ts@1.6.0:
     resolution: {integrity: sha512-iDBax3MO5ajNS3lDC1aSsdWgwGyUYxHX1LCd6XsnHrb2cpLOwJTDsSDucyVGy/zHMQHYu3tsjkTZzdZIwQ8Y5A==}
     hasBin: true
-
-  i18next-subliminal@1.0.1:
-    resolution: {integrity: sha512-h3m1oQ8lTaTNNgqmvBXAzFSGoJ0uobUcFW6TJMaWV4QDQ0+YGIih3ZcCX1XouGzK8yyFX13lP+2zAT/k7u4oiQ==}
 
   i18next@24.2.3:
     resolution: {integrity: sha512-lfbf80OzkocvX7nmZtu7nSTNbrTYR52sLWxPtlXX1zAhVw8WEnFk4puUkCR4B1dNQwbSpEHHHemcZu//7EcB7A==}
@@ -1252,14 +1231,8 @@ packages:
     resolution: {integrity: sha512-m+HUWra8Xs9aZV6EhDKgJNUsVedTbJnf4koIkv+rrnNy1GhmAETd/i54d2hPMPl9rfb4gtbGMWAFWNuwFzHmJA==}
     hasBin: true
 
-  locize-lastused@4.0.2:
-    resolution: {integrity: sha512-WKZ9VS1VSmluUxOXlVjJRFQ2sw89o7n4yaUA3ARaExcMhqFGFipcgqTb3O5U+undc8yxdQZ74oxZmwOLei3VKA==}
-
   locize-xcstrings@2.0.0:
     resolution: {integrity: sha512-Gef3IrMDSB5ZuRbym9ktr7KXCTFjIvs1T2TEnaew5ed7BBwt3od0/sj8C7X9iGpRebHxG1kyF6hR6aK8iBPkLg==}
-
-  locize@4.0.13:
-    resolution: {integrity: sha512-vOCxcRSKBADppevi2FMGAYzPc+c29ap1BRCi4FePdiAjdTyauaxGeWks+qHBNxD4MtduY/aLe/UYXYCsJQEvog==}
 
   lodash.clonedeep@4.5.0:
     resolution: {integrity: sha512-H5ZhCF25riFd9uB5UCkVKo61m3S/xZk1x4wA6yp/L3RFP6Z/eHH1ymQcGLo7J3GMPfm0V/7m1tryHuGVxpqEBQ==}
@@ -2128,17 +2101,6 @@ snapshots:
       '@eslint/core': 0.12.0
       levn: 0.4.1
 
-  '@floating-ui/core@1.6.9':
-    dependencies:
-      '@floating-ui/utils': 0.2.9
-
-  '@floating-ui/dom@1.6.13':
-    dependencies:
-      '@floating-ui/core': 1.6.9
-      '@floating-ui/utils': 0.2.9
-
-  '@floating-ui/utils@0.2.9': {}
-
   '@fluent/syntax@0.19.0': {}
 
   '@humanfs/core@0.19.1': {}
@@ -2554,12 +2516,6 @@ snapshots:
     transitivePeerDependencies:
       - encoding
 
-  cross-fetch@4.1.0(encoding@0.1.13):
-    dependencies:
-      node-fetch: 2.7.0(encoding@0.1.13)
-    transitivePeerDependencies:
-      - encoding
-
   cross-spawn@7.0.6:
     dependencies:
       path-key: 3.1.1
@@ -2872,9 +2828,9 @@ snapshots:
     dependencies:
       '@babel/runtime': 7.27.0
 
-  i18next-locize-backend@7.0.4(encoding@0.1.13):
+  i18next-http-backend@3.0.2(encoding@0.1.13):
     dependencies:
-      cross-fetch: 4.1.0(encoding@0.1.13)
+      cross-fetch: 4.0.0(encoding@0.1.13)
     transitivePeerDependencies:
       - encoding
 
@@ -2882,10 +2838,6 @@ snapshots:
     dependencies:
       '@babel/runtime': 7.27.0
       yaml: 2.7.1
-
-  i18next-subliminal@1.0.1:
-    dependencies:
-      '@babel/runtime': 7.27.0
 
   i18next@24.2.3(typescript@5.7.3):
     dependencies:
@@ -3011,19 +2963,7 @@ snapshots:
       - encoding
       - supports-color
 
-  locize-lastused@4.0.2(encoding@0.1.13):
-    dependencies:
-      cross-fetch: 4.0.0(encoding@0.1.13)
-    transitivePeerDependencies:
-      - encoding
-
   locize-xcstrings@2.0.0: {}
-
-  locize@4.0.13:
-    dependencies:
-      '@babel/runtime': 7.27.0
-      '@floating-ui/dom': 1.6.13
-      i18next-subliminal: 1.0.1
 
   lodash.clonedeep@4.5.0: {}
 
