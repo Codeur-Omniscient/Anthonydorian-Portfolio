@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import About from "./components/About";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
@@ -31,4 +32,16 @@ function App() {
   );
 }
 
-export default App;
+export default function WrapperApp() {
+  return (
+    <Suspense
+      fallback={
+        <div className="flex h-screen items-center justify-center text-2xl font-bold">
+          Loading...
+        </div>
+      }
+    >
+      <App />
+    </Suspense>
+  );
+}
